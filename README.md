@@ -13,6 +13,9 @@ Autor: Ger Apeldoorn
    sudo dpkg -i puppetlabs-release-pc1-xenial.deb
    sudo apt update
 
+## Instalação do Puppet/PuppetServer
+   - Ubuntu: sudo apt-get install puppetserver
+   - CentOS7 - yum install puppetserver
 # GitLab
   - Ubuntu 16.04 (https://about.gitlab.com/downloads/#ubuntu1604)
   - CentOS7 - (https://about.gitlab.com/downloads/#centos7)
