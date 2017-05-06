@@ -6,8 +6,8 @@ Vagrant.configure(2) do |config|
   config.vm.define :ubuntumaster do |config|
     config.vm.hostname = "ubuntumaster.testlabs.com.br"
     config.vm.box_check_update = true
-    config.vm.box = "puppetlabs/ubuntu-16.04-64-nocm"
-    config.vm.box_url = "https://atlas.hashicorp.com/puppetlabs/boxes/ubuntu-16.04-64-nocm"
+    config.vm.box = "puppetlabs/ubuntu-16.04-64-puppet "
+    config.vm.box_url = "https://atlas.hashicorp.com/puppetlabs/boxes/ubuntu-16.04-64-puppet"
     # editar conforme a sua rede
     config.vm.network "private_network", ip: "192.168.60.180"
     #config.vm.network "forwarded_port", guest: 80, host: 8080
@@ -16,7 +16,7 @@ Vagrant.configure(2) do |config|
     #VM CONFIG
     config.vm.provider "virtualbox" do |virtualbox|
       virtualbox.customize [ "modifyvm", :id, "--cpus", "2" ]
-      virtualbox.customize [ "modifyvm", :id, "--memory", "2048" ]
+      virtualbox.customize [ "modifyvm", :id, "--memory", "4096" ]
       virtualbox.gui = false
     end
     #FIM VM CONFIG
@@ -25,8 +25,8 @@ Vagrant.configure(2) do |config|
 config.vm.define :gitlab do |config|
     config.vm.hostname = "gitlab.testlabs.com.br"
     config.vm.box_check_update = true
-    config.vm.box = "puppetlabs/ubuntu-16.04-64-nocm"
-    config.vm.box_url = "https://atlas.hashicorp.com/puppetlabs/boxes/ubuntu-16.04-64-nocm"
+    config.vm.box = "puppetlabs/ubuntu-16.04-64-puppet "
+    config.vm.box_url = "https://atlas.hashicorp.com/puppetlabs/boxes/ubuntu-16.04-64-puppet"
     # editar conforme a sua rede
     config.vm.network "private_network", ip: "192.168.60.179"
     #config.vm.network "forwarded_port", guest: 80, host: 8080
@@ -42,23 +42,23 @@ config.vm.define :gitlab do |config|
   end
 
 # Caso queira usar o Centos7 para o master
-  config.vm.define :centosmaster7 do |config|
+  config.vm.define :centosmaster do |config|
     config.vm.hostname = "centosmaster.testlabs.com.br"
     config.vm.box_check_update = true
-    config.vm.box = "puppetlabs/centos-7.0-64-nocm"
-    config.vm.box_url = "https://atlas.hashicorp.com/puppetlabs/boxes/centos-7.0-64-nocm"
+    config.vm.box = "puppetlabs/centos-7.2-64-puppet"
+    config.vm.box_url = "https://atlas.hashicorp.com/puppetlabs/boxes/centos-7.2-64-puppet"
     # editar conforme a sua rede
     config.vm.network "private_network", ip: "192.168.60.181"
     #config.vm.network "forwarded_port", guest: 80, host: 8081
     #config.vm.network "forwarded_port", guest: 443, host: 4445
 
-    #VM CONFIG
+  #VM CONFIG
     config.vm.provider "virtualbox" do |virtualbox|
-      virtualbox.customize [ "modifyvm", :id, "--cpus", "1" ]
-      virtualbox.customize [ "modifyvm", :id, "--memory", "1024" ]
+      virtualbox.customize [ "modifyvm", :id, "--cpus", "2" ]
+      virtualbox.customize [ "modifyvm", :id, "--memory", "4096" ]
       virtualbox.gui = false
     end
-    #FIM VM CONFIG
+    #FIM VM CONFIG  
   end
 
   #PUPPET
