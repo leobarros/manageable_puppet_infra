@@ -1,5 +1,8 @@
 # Manageable Puppet Infra
 Gerenciando a infraestrutura com Puppet
+Ambiente para acompanhar o curso sobre Puppet em:
+https://www.udemy.com/manageable-puppet-infrastructure/
+Autor: Ger Apeldoorn
 
 # Repositório
 ## Instalação no Red Hat/CentOS7
