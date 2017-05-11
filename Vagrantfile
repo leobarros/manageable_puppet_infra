@@ -68,7 +68,7 @@ config.vm.define :gitlab do |config|
     config.vm.box = "puppetlabs/centos-7.2-64-puppet"
     config.vm.box_url = "https://atlas.hashicorp.com/puppetlabs/boxes/centos-7.2-64-puppet"
     # editar conforme a sua rede
-    config.vm.network "private_network", ip: "192.168.60.181"
+    config.vm.network "private_network", ip: "192.168.60.182"
     #config.vm.network "forwarded_port", guest: 80, host: 8081
     #config.vm.network "forwarded_port", guest: 443, host: 4445
 
